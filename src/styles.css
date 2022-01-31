@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-ai-c {
+  align-items: center;
+}
+
+.flex-jc-c {
+  justify-content: center;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.m-tb-6 {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.m-tb-10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
