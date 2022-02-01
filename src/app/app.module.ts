@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { TodoInputComponent } from './todo-input/todo-input.component';
 import { TodoFormComponent } from './todo-form/todo-form.component';
 import { TodoButtonComponent } from './todo-button/todo-button.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TodoButtonComponent } from './todo-button/todo-button.component';
     TodoButtonComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
