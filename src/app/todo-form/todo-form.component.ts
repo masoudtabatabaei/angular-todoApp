@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo-form.component.css']
 })
 export class TodoFormComponent implements OnInit {
-
+  parentMessage = "from FORM component!";
   constructor() { }
 
   ngOnInit(): void {

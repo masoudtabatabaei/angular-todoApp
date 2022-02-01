@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-todo-input',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo-input.component.css']
 })
 export class TodoInputComponent implements OnInit {
+  @Input() childMessage = '';
 
   constructor() { }
 
