@@ -1,4 +1,4 @@
-<form>
-  <app-todo-input [childMessage]="parentMessage"></app-todo-input>
+<form (ngSubmit)="onSubmit()">
+  <app-todo-input></app-todo-input>
   <ng-content></ng-content>
 </form>

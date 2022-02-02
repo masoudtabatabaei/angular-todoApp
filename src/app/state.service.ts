@@ -1,26 +1,22 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, ReplaySubject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StateService {
-  titleSource = new BehaviorSubject<string>('');
-  todosList = new BehaviorSubject<string[]>([]);
+
+  todo:BehaviorSubject<string> = new BehaviorSubject<string>('');
+
+  todosHistory:BehaviorSubject<string[]> = new BehaviorSubject<string[]>([]);
 
   constructor() {}
 
-  setNewTitle(newTitle: string):void {
-    this.titleSource.next(newTitle);
+  addTodos(newTitle:string){
+    this.todosHistory.getValue().push(newTitle);
   }
 
-  getTitle() {
-    return this.titleSource.getValue();
-  }
-
-  addToList(newTitle:string){
-    let items = this.todosList.getValue();
-    items.push(newTitle);
-    this.todosList.next(items);
+  showList(){
+    return this.todosHistory.getValue();
   }
 }

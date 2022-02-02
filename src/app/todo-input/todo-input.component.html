@@ -1,2 +1,5 @@
-<span>It is {{ childMessage }}</span>
-<input type="text" name="title" placeholder="Enter a title here"/>
+<!--<span>It is {{ childMessage }}</span>-->
+<input type="text"
+       name="title"
+       placeholder="Enter a title here"
+       (input)="getInputValue($event)">

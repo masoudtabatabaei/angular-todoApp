@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component , Input , OnInit } from '@angular/core';
+import { StateService } from '../state.service';
 
 @Component({
   selector: 'app-todo-input',
@@ -8,9 +9,14 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TodoInputComponent implements OnInit {
   @Input() childMessage = '';
 
-  constructor() { }
+  constructor(private state:StateService) { }
 
   ngOnInit(): void {
+
   }
 
+  getInputValue(event:Event) {
+    let inputValue = (<HTMLInputElement>event.target).value;
+    this.state.todo.next(inputValue);
+  }
 }
