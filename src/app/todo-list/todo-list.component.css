@@ -3,9 +3,15 @@
 }
 
 .todosHistory .todoItem {
-  padding: 8px 16px;
-  color: #ffffff;
-  background-color: #555555;
+  padding: 9px 16px;
+  box-shadow: 0 2px 7px #cccccc;
   border-radius: 5px;
   margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.remove {
+  cursor: pointer;
 }

@@ -8,7 +8,7 @@ export class StateService {
 
   todo:BehaviorSubject<string> = new BehaviorSubject<string>('');
 
-  todosHistory:BehaviorSubject<string[]> = new BehaviorSubject<string[]>([]);
+  todosHistory:BehaviorSubject<string[]> = new BehaviorSubject<string[]>(['first']);
 
   constructor() {}
 

@@ -1,5 +1,8 @@
 <div class="todosHistory">
   <div class="todoItem" *ngFor="let todoItem of showTodosList()">
-    {{ todoItem }}
+    <span>{{ todoItem }}</span>
+    <span class="remove">
+      <img src="/assets/img/remove-svgrepo-com.svg" alt="removeTodo">
+    </span>
   </div>
 </div>
