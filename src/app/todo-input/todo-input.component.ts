@@ -18,5 +18,10 @@ export class TodoInputComponent implements OnInit {
   getInputValue(event:Event) {
     let inputValue = (<HTMLInputElement>event.target).value;
     this.state.todo.next(inputValue);
+    if (inputValue.trim() !== '') {
+      this.state.inputIsEmpty.next(false);
+    } else {
+      this.state.inputIsEmpty.next(true);
+    }
   }
 }
